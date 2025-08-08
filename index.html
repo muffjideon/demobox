@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <title>DemoBox — Ship Make/n8n POCs in 72 hours (No Prod Data)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Synthetic-first, read-only data & compliance layer for Make/n8n agencies. Demo in 72 hours without touching production data. Also works with Pipedream and Zapier.">
+  <meta name="description" content="Synthetic-first, read-only data & compliance layer for Make/n8n agencies. Demo in 72 hours without touching production data.">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="DemoBox — Ship Make/n8n POCs in 72 hours">
-  <meta property="og:description" content="Read-only proxy, synthetic data, DPA/SCC. Demo value this week without prod data.">
+  <meta property="og:description" content="Read-only proxy, synthetic data, event replays, EU DPA/SCC.">
   <style>
     :root{
       --bg:#ffffff;
@@ -17,6 +17,7 @@
       --muted:#f3f4f6;
       --border:#e5e7eb;
       --accent:#2563eb;
+      --chip:#eef2ff;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -55,6 +56,8 @@
     .code{font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;background:#0f172a;color:#e5e7eb;border-radius:10px;padding:12px}
     .divider{height:1px;background:var(--border);margin:22px 0}
     iframe{width:100%;border:1px solid var(--border);border-radius:12px;min-height:520px;background:#fff}
+    .sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .chip{font-size:12px;border:1px solid var(--border);padding:4px 10px;border-radius:999px;background:var(--chip);}
     footer{border-top:1px solid var(--border);padding:20px 0;color:#6b7280;font-size:14px}
     .center{text-align:center}
   </style>
@@ -102,10 +105,58 @@ Authorization: Bearer &lt;ephemeral_token&gt;</pre>
       </div>
     </section>
 
+    <section>
+      <div class="wrap">
+        <h2>Proof of pain (from the community)</h2>
+        <div class="grid cols-3">
+          <div class="card">
+            <strong>Real data in dev is risky</strong>
+            <p class="sub">Engineering best practices caution against using production data in non‑prod due to regulation and security risks — synthetic data + access controls are recommended.</p>
+            <div class="sources">
+              <a class="chip" href="https://www.synthesized.io/blog/production-data-in-non-production" target="_blank" rel="noopener">Synthesized: Prod data in non‑prod</a>
+            </div>
+          </div>
+          <div class="card">
+            <strong>GDPR discourages prod data in test</strong>
+            <p class="sub">GDPR doesn’t outright ban it, but you must prove necessity and apply strict controls. The trend: don’t use production data in test.</p>
+            <div class="sources">
+              <a class="chip" href="https://www.datprof.com/gdpr" target="_blank" rel="noopener">DATPROF: GDPR & test data</a>
+            </div>
+          </div>
+          <div class="card">
+            <strong>Mock APIs are massively used</strong>
+            <p class="sub">Huge adoption of generic fake APIs shows the need for “prod‑like” demos; automation teams need the same — but with CRM/e‑com shapes and event replays.</p>
+            <div class="sources">
+              <a class="chip" href="https://jsonplaceholder.typicode.com/" target="_blank" rel="noopener">JSONPlaceholder</a>
+              <a class="chip" href="https://dummyjson.com/" target="_blank" rel="noopener">DummyJSON</a>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:12px;">
+          <strong>Even n8n highlights replay/mocking</strong>
+          <p class="sub">n8n’s docs encourage replaying/mocking data during prototyping — DemoBox takes this further with event packs (duplicates, out‑of‑order, 429 backoff) and EU‑hosted compliance.</p>
+          <div class="sources">
+            <a class="chip" href="https://docs.n8n.io" target="_blank" rel="noopener">n8n docs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>How DemoBox is different</h2>
+        <div class="grid cols-3">
+          <div class="card"><strong>Automation‑first</strong><br><span class="sub">Tailored to Make/n8n workflows, not generic front‑end mocks.</span></div>
+          <div class="card"><strong>Event realism</strong><br><span class="sub">Replay real‑world webhook behaviour: retries, duplicates, out‑of‑order, 429s.</span></div>
+          <div class="card"><strong>EU compliance</strong><br><span class="sub">Read‑only proxy, field masking, audit export, and DPA/SCC pack (EU‑hosted).</span></div>
+        </div>
+      </div>
+    </section>
+
     <section id="book">
       <div class="wrap">
-        <h2>Book a 30-min POC Assessment</h2>
-        <p class="sub">Bring one live opportunity. We’ll show how to demo it in 72 hours—synthetic-first and read-only.</p>
+        <h2>Book a 30‑min POC Assessment</h2>
+        <p class="sub">Bring one live opportunity. We’ll show how to demo it in 72 hours—synthetic‑first and read‑only.</p>
         <iframe src="https://calendly.com/calle-jm-nilsson/30min?hide_event_type_details=1&hide_gdpr_banner=1" title="Book a 30-min call"></iframe>
       </div>
     </section>
